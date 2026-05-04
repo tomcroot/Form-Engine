@@ -1,5 +1,5 @@
 {
-    "name": "tapp/form-engine",
+    "name": "tomcroot/form-engine",
     "description": "Generic data collection engine with Filament form builder UI. Reusable across applications.",
     "keywords": [
         "tapp network",
@@ -45,13 +45,13 @@
     "autoload": {
         "psr-4": {
             "Tapp\\FilamentFormBuilder\\": "src",
-            "Tapp\\FormEngine\\": "src"
+            "Tomcroot\\FormEngine\\": "src/FormEngine"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tapp\\FilamentFormBuilder\\Tests\\": "tests/",
-            "Tapp\\FormEngine\\Tests\\": "tests/",
+            "Tomcroot\\FormEngine\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -73,7 +73,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Tapp\\FilamentFormBuilder\\FilamentFormBuilderServiceProvider"
+                "Tapp\\FilamentFormBuilder\\FilamentFormBuilderServiceProvider",
+                "Tomcroot\\FormEngine\\FormEngineServiceProvider"
             ]
         }
     },

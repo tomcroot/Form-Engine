@@ -1,8 +1,8 @@
 <?php
 
-namespace Tapp\FormEngine\Contracts;
+namespace Tomcroot\FormEngine\Contracts;
 
-use Tapp\FormEngine\Models\FormSubmission;
+use Tomcroot\FormEngine\Models\FormSubmission;
 
 /**
  * Contract for models that can submit forms

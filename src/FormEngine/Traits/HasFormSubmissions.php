@@ -1,9 +1,9 @@
 <?php
 
-namespace Tapp\FormEngine\Traits;
+namespace Tomcroot\FormEngine\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Tapp\FormEngine\Models\FormSubmission;
+use Tomcroot\FormEngine\Models\FormSubmission;
 
 /**
  * Trait to add form submission capabilities to any model

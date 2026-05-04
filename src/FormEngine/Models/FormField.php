@@ -1,6 +1,6 @@
 <?php
 
-namespace Tapp\FormEngine\Models;
+namespace Tomcroot\FormEngine\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
