@@ -1,6 +1,6 @@
 {
-    "name": "tapp/filament-form-builder",
-    "description": "User facing form builder using Filament components",
+    "name": "tapp/form-engine",
+    "description": "Generic data collection engine with Filament form builder UI. Reusable across applications.",
     "keywords": [
         "tapp network",
         "filament",
@@ -8,9 +8,11 @@
         "survey",
         "forms",
         "form builder",
-        "call to action"
+        "data collection",
+        "form engine",
+        "polymorphic"
     ],
-    "homepage": "https://github.com/TappNetwork/filament-form-builder",
+    "homepage": "https://github.com/yourusername/filament-form-builder",
     "license": "MIT",
     "authors": [
         {
@@ -42,12 +44,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Tapp\\FilamentFormBuilder\\": "src"
+            "Tapp\\FilamentFormBuilder\\": "src",
+            "Tapp\\FormEngine\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tapp\\FilamentFormBuilder\\Tests\\": "tests/",
+            "Tapp\\FormEngine\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },

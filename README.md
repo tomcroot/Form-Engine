@@ -1,9 +1,13 @@
-# Filament Forms
+# Form Engine
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/tapp/filament-form-builder.svg?style=flat-square)](https://packagist.org/packages/tapp/filament-form-builder)
-![GitHub Tests Action Status](https://github.com/TappNetwork/Filament-Form-Builder/actions/workflows/run-tests.yml/badge.svg)
-![GitHub Code Style Action Status](https://github.com/TappNetwork/Filament-Form-Builder/actions/workflows/fix-php-code-style-issues.yml/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/tapp/filament-form-builder.svg?style=flat-square)](https://packagist.org/packages/tapp/filament-form-builder)
+A data collection engine with integrated Filament form builder UI. Reusable across Laravel applications and external APIs.
+
+**Backward compatible** with existing Filament Form Builder installations.
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/tapp/form-engine.svg?style=flat-square)](https://packagist.org/packages/tapp/form-engine)
+![GitHub Tests Action Status](https://github.com/yourusername/Filament-Form-Builder/actions/workflows/run-tests.yml/badge.svg)
+![GitHub Code Style Action Status](https://github.com/yourusername/Filament-Form-Builder/actions/workflows/fix-php-code-style-issues.yml/badge.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/tapp/form-engine.svg?style=flat-square)](https://packagist.org/packages/tapp/form-engine)
 
 A Filament plugin and package that allows the creation of forms via the admin panel for collecting user data on the front end. Forms are composed of filament field components and support all Laravel validation rules. Form responses can be rendered on the front end or exported to .csv.
 
@@ -20,31 +24,59 @@ A Filament plugin and package that allows the creation of forms via the admin pa
 
 ## Version Compatibility
 
-Filament | Filament Form Builder | Documentation
-:--------|:-------------------|:--------------
-4.x/5.x  | 4.x                | Current
-3.x      | 1.x                | [Check the docs](https://github.com/TappNetwork/Filament-Form-Builder/tree/1.x)
+Filament | Form Engine | Documentation
+:--------|:------------|:--------------
+4.x/5.x  | 4.x         | Current
+3.x      | 1.x         | [Check the docs](https://github.com/yourusername/Filament-Form-Builder/tree/1.x)
 
-### Installing the Filament Forms Package
+### Installing From Your Fork
 
-Install the plugin via Composer:
-
-This package is not yet on Packagist. Add the repository to your composer.json
+This package is maintained via a fork. Add your fork repository to your `composer.json`:
 
 ```json
 {
-"repositories": [
+    "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/TappNetwork/Filament-Form-Builder"
+            "url": "https://github.com/yourusername/Filament-Form-Builder"
         }
-    ],
+    ]
 }
 ```
 
+Then install via Composer:
+
 ```bash
-composer require tapp/filament-form-builder:"^4.0"
+composer require tapp/form-engine:"^4.0"
 ```
+
+**Note:** Replace `yourusername` with your GitHub username or organization.
+
+#### Alternative: Using a Local Path (Development)
+
+If you're developing locally, you can also use a path repository:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../forms",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}
+```
+
+Then install:
+
+```bash
+composer require tapp/form-engine:"*"
+```
+
+### Publishing Assets
 
 You can publish the migrations with:
 

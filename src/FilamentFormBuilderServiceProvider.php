@@ -26,6 +26,7 @@ class FilamentFormBuilderServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package->name('filament-form-builder')
+            ->hasMigration('create_form_engine_tables')
             ->hasMigration('create_dynamic_filament_form_tables')
             ->hasMigration('add_schema_to_filament_form_fields')
             ->hasMigration('add_notification_emails_to_filament_forms_table')
