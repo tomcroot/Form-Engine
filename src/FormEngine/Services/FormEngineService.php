@@ -64,10 +64,10 @@ class FormEngineService
 
         // Fallback: create directly
         return FormSubmission::create([
-            'form_id' => $form->id,
-            'subject_type' => get_class($subject),
-            'subject_id' => $subject->id,
-            'data' => $validated,
+            'form_id'      => $form->id,
+            'subject_type' => method_exists($subject, 'getMorphClass') ? $subject->getMorphClass() : get_class($subject),
+            'subject_id'   => $subject->id,
+            'data'         => $validated,
             'submitted_by' => $submittedBy,
         ]);
     }
@@ -99,10 +99,10 @@ class FormEngineService
 
         // Fallback: create directly
         return FormSubmission::create([
-            'form_id' => $form->id,
-            'subject_type' => get_class($subject),
-            'subject_id' => $subject->id,
-            'file_path' => $filePath,
+            'form_id'      => $form->id,
+            'subject_type' => method_exists($subject, 'getMorphClass') ? $subject->getMorphClass() : get_class($subject),
+            'subject_id'   => $subject->id,
+            'file_path'    => $filePath,
             'submitted_by' => $submittedBy,
         ]);
     }
